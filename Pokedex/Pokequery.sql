@@ -27,8 +27,8 @@ FOREIGN KEY (Id_Pokemon) references Pokemon (Id));
 Insert Into Tipo (Id, Descripcion, Imagen)
 Values 
 (1,"Fire","https://pokeguide.neocities.org/Pic/fireicon.png"),
-(2,"Water","https://pokeguide.neocities.org/Pic/watericon.png"),
-(3,"Grass","https://pokeguide.neocities.org/Pic/grassicon.png");
+(2,"Grass","https://pokeguide.neocities.org/Pic/grassicon.png"),
+(3,"Water","https://pokeguide.neocities.org/Pic/watericon.png");
 
 Insert into Genero (Id, Descripcion, Imagen)
 Values 	
