@@ -26,9 +26,10 @@
 				{
 
 					$sql = "select Pok.Descripcion Pokemon, Pok.Ataque, Pok.Imagen,G.Descripcion Genero,T.Descripcion Tipo,T.Imagen Imgtipo, G.Imagen Imggenero  
-					from Pokemon Pok join Genero G on G.id=Pok.Id_Genero 
-					Join Tipo T on T.Id=PT.Id_Tipo
+					from Pokemon Pok 
 					Join Poke_Tipo PT on PT.Id_Pokemon=Pok.Id
+					Join Tipo T on T.Id=PT.Id_Tipo
+					join Genero G on G.id=Pok.Id_Genero 
 					Where Pok.Descripcion='".$buscado."'";
 
 					$result=mysqli_query($conn, $sql);
@@ -64,7 +65,7 @@
 
 						echo
 						"<div class='contenedor'>".
-						"<h2'>".$rows['Descripcion']."</h2>".
+						"<h2>".$rows['Descripcion']."</h2>".
 						"<div class=''>"."<img class='imagenes' src=".$imagen.">"."</div>".
 						"</div>";
 					}	
@@ -74,14 +75,9 @@
 			}
 
 			?>
-<!-- <form method="post" action="pokedex.php" >
-
+<form method="post" action="pokedex.php" >
 <input class="enviar" type="text" name="whoisthat">
-<button class="enviar" type="submit">Consulta</button> -->
-
-<form method="POST" action="pokedex.php" >
-				<input class="enviar" type="text" name="whoisthat" autofocus>
-			</form>
+<button class="enviar" type="submit">Consulta</button>
 </main>
 </form>
 </body>
