@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="recursos/css/style.css">
-    <title>Editar</title>
+    <title>Nuevo</title>
 </head>
 <body>
 <main>
@@ -56,17 +56,22 @@
             $sexo=$_POST['sexo'];
             $ataque=$_POST['ataque'];
 
-            $sql="select * from pokemon where id='$id'";
+            $sql1="select * from pokemon where id='$id'";
             
-            if(true){
+            $result=mysqli_query($conn,$sql1);
+            $asd=mysqli_fetch_assoc($result);
+
+            if(!($asd['id']==$id)){
                 
                 $sql2="insert Into Pokemon (id, nombre, ataque, imagen, tipo,sexo) values('$id','$nombre','$ataque','$imagen','$tipo','$sexo')";           
                 
                 $result=mysqli_query($conn,$sql2);
+
+                echo "<p class='labelform editado'>Guardado Correctamente</p>";
                 
             }
             else{
-                echo "error de codigo";
+                echo "<p class='labelform editado'>Error de Codigo</p>";
             }
         }
         if(isset($_POST["cerrar"])){

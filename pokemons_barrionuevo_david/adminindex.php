@@ -2,7 +2,7 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="recursos/css/style.css">
-	<title>Pokedex</title>
+	<title>PokedexAdmin</title>
 </head>
 <body>
 <main class="main">
