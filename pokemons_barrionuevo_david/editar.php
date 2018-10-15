@@ -50,6 +50,7 @@
     <?php
         if(isset($_POST["enviar"])){
             $nombre=$_POST['nombre'];
+            $nombre=ucfirst($nombre);
             $imagen=$_POST['imagen'];
             $tipo=$_POST['tipo'];
             $sexo=$_POST['sexo'];
