@@ -3227,7 +3227,7 @@
     "weightsManifest": [
         {
             "paths": [
-                "https://cdn.jsdelivr.net/gh/ibarrionuevo50/PW2/model.weights.bin"
+                "model.weights.bin"
             ],
             "weights": [
                 {
