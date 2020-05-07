@@ -3227,7 +3227,7 @@
     "weightsManifest": [
         {
             "paths": [
-                "model.weights.bin"
+                ""
             ],
             "weights": [
                 {
